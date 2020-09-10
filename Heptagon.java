@@ -7,7 +7,7 @@ public class Heptagon {
 		System.out.println("enter length of the side");
 		float s = obj.nextFloat();
 		float a = 3.634f * s * s;
-		System.out.println("")
+		System.out.println("area of heptagon"+a);
 
 	}
 
