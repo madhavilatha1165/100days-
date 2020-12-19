@@ -1,40 +1,32 @@
-package pack1;
-abstract class Transport
-{
-	void Color()
-	{
-		System.out.println("red");
-	}
-	abstract int Wheels();
-}
-class Car extends Transport
-{
-	int Wheels()
-	{
-		return 4;
-	}
-}
-class Byke extends Transport
-{
-	int Wheels()
-	{
-		return 2;
+package hackerank_prgms;
+import java.util.*;
+abstract class Book{
+	String title;
+	abstract void setTitle(String s);
+	String getTitle(){
+		return title;
 	}
 }
 
+//Write MyBook class here
+class MyBook extends Book
+{
+  void setTitle (String s) 
+  {
+      super.title = s;
+  }
+}
 
-public class Abstractclass {
-
-	public static void main(String[] args) {
-		Car obj1 = new Car();
-		obj1.Color();
-		System.out.println("Car has " + obj1.Wheels()+ " wheels");
-
-		Byke obj2 = new Byke();
-		obj2.Color();
-		System.out.println("byke has " + obj2.Wheels()+ " wheels");
-
-
+public class Abstractclass{
+	
+	public static void main(String []args){
+		//Book new_novel=new Book(); This line prHMain.java:25: error: Book is abstract; cannot be instantiated
+		Scanner sc=new Scanner(System.in);
+		String title=sc.nextLine();
+		MyBook new_novel=new MyBook();
+		new_novel.setTitle(title);
+		System.out.println("The title is: "+new_novel.getTitle());
+      	sc.close();
+		
 	}
-
 }
